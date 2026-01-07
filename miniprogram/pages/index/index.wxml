@@ -1,0 +1,16 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <image class="logo" src="" mode="aspectFit"></image> <!-- Placeholder for logo -->
+    <text class="title">{{title}}</text>
+    <text class="subtitle">{{subtitle}}</text>
+  </view>
+
+  <view class="actions">
+    <button class="btn-primary" bindtap="startAssessment">开始风险评估</button>
+    <view class="disclaimer">
+      <text>本工具基于《中国血脂管理指南（2023年）》开发</text>
+      <text>评估结果仅供参考，不可替代专业医疗诊断</text>
+    </view>
+  </view>
+</view>

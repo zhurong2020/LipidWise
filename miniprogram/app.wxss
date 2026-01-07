@@ -1,0 +1,27 @@
+/** app.wxss **/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+} 
+
+page {
+  --brand-color: #00b26a; /* Teal/Green for health */
+  --brand-light: #e0f2f1;
+  --text-main: #333333;
+  --text-secondary: #666666;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+  
+  background-color: #f6f6f6;
+  /* Enhanced Typography for Elderly */
+  font-size: 34rpx; /* Base size increase */
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+}
