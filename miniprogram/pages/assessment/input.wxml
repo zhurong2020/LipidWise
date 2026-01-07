@@ -1,0 +1,75 @@
+<!--pages/assessment/input.wxml-->
+<view class="container">
+  <view class="form-group">
+    <view class="section-title">基本信息</view>
+    
+    <view class="input-item">
+      <text class="label">年龄 (岁)</text>
+      <input type="number" placeholder="请输入年龄" data-field="age" bindinput="onInputChange" value="{{formData.age}}" />
+    </view>
+
+    <view class="input-item">
+      <text class="label">性别</text>
+      <radio-group class="radio-group" bindchange="onGenderChange">
+        <label class="radio" wx:for="{{genders}}" wx:key="value">
+          <radio value="{{item.value}}" checked="{{item.value === formData.gender}}" color="#00b26a"/>
+          {{item.name}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="section-title">病史与习惯</view>
+    
+    <view class="switch-item">
+      <view class="label-box">
+        <text class="label">既往病史 (ASCVD)</text>
+        <text class="sub-label">包括心肌梗死、脑卒中等</text>
+      </view>
+      <switch color="#00b26a" checked="{{formData.hasAscvd}}" data-field="hasAscvd" bindchange="onSwitchChange"/>
+    </view>
+    
+    <view class="switch-item">
+      <text class="label">是否吸烟</text>
+      <switch color="#00b26a" checked="{{formData.smoking}}" data-field="smoking" bindchange="onSwitchChange"/>
+    </view>
+
+    <view class="switch-item">
+      <text class="label">是否有糖尿病</text>
+      <switch color="#00b26a" checked="{{formData.diabetes}}" data-field="diabetes" bindchange="onSwitchChange"/>
+    </view>
+
+    <view class="switch-item">
+      <text class="label">是否有高血压</text>
+      <switch color="#00b26a" checked="{{formData.hypertension}}" data-field="hypertension" bindchange="onSwitchChange"/>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="section-title">临床指标</view>
+    
+    <view class="input-item">
+      <text class="label">收缩压 (mmHg)</text>
+      <input type="number" placeholder="高压值" data-field="sbp" bindinput="onInputChange" value="{{formData.sbp}}" />
+    </view>
+
+    <view class="input-item">
+      <text class="label">总胆固醇 TC (mmol/L)</text>
+      <input type="digit" placeholder="例如 5.2" data-field="tc" bindinput="onInputChange" value="{{formData.tc}}" />
+    </view>
+
+    <view class="input-item">
+      <text class="label">低密度脂蛋白 LDL-C (mmol/L)</text>
+      <input type="digit" placeholder="例如 3.1" data-field="ldl" bindinput="onInputChange" value="{{formData.ldl}}" />
+    </view>
+
+    <view class="input-item">
+      <text class="label">高密度脂蛋白 HDL-C (mmol/L)</text>
+      <input type="digit" placeholder="例如 1.2" data-field="hdl" bindinput="onInputChange" value="{{formData.hdl}}" />
+    </view>
+  </view>
+
+  <button class="btn-submit" bindtap="submitForm">开始评估</button>
+  <view class="spacer"></view>
+</view>

@@ -1,0 +1,46 @@
+<!--pages/assessment/result.wxml-->
+<view class="container" wx:if="{{record}}">
+  <view class="result-card" style="background-color: {{record.result.level.color}}">
+    <view class="risk-label">风险等级</view>
+    <view class="risk-value">{{record.result.level.label}}</view>
+    <view class="risk-reason">{{record.result.reason}}</view>
+  </view>
+
+  <view class="section" wx:if="{{advice.target}}">
+    <view class="section-title">血脂控制目标</view>
+    <view class="target-box">
+      <text class="target-text">{{advice.target}}</text>
+    </view>
+  </view>
+
+  <view class="section" wx:if="{{simulations.length > 0}}">
+      <view class="section-title">健康预演 (Intervention)</view>
+      <view class="simulator-intro">如果您能改善以下因素，风险将降低：</view>
+      <view class="sim-item" wx:for="{{simulations}}" wx:key="type">
+          <view class="sim-header">
+              <text class="sim-label">{{item.label}}</text>
+              <text class="sim-change">{{item.oldLevel.label}} -> {{item.newLevel.label}}</text>
+          </view>
+          <view class="sim-desc">{{item.desc}}</view>
+      </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">健康建议</view>
+    <view class="advice-list">
+      <view class="advice-item" wx:for="{{advice.advice}}" wx:key="index">
+        <text class="dot">•</text>
+        <text class="content">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn-primary" open-type="share">分享给医生/家人</button>
+    <button class="btn-secondary" bindtap="goHome">返回首页</button>
+  </view>
+  
+  <view class="disclaimer">
+      提示：请像医生出示此页面作为参考。
+  </view>
+</view>

@@ -1,0 +1,134 @@
+/* pages/assessment/result.wxss */
+.container {
+    padding: 40rpx;
+    background-color: #f6f6f6;
+    min-height: 100vh;
+}
+
+.result-card {
+    border-radius: 20rpx;
+    padding: 60rpx 40rpx;
+    color: white;
+    box-shadow: 0 10rpx 30rpx rgba(0,0,0,0.15);
+    margin-bottom: 50rpx;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.risk-label {
+    font-size: 32rpx;
+    opacity: 0.9;
+    margin-bottom: 20rpx;
+}
+
+.risk-value {
+    font-size: 80rpx;
+    font-weight: bold;
+    margin-bottom: 30rpx;
+}
+
+.risk-reason {
+    font-size: 28rpx;
+    background: rgba(0,0,0,0.1);
+    padding: 10rpx 20rpx;
+    border-radius: 10rpx;
+    display: inline-block;
+}
+
+.section {
+    background: white;
+    border-radius: 16rpx;
+    padding: 30rpx;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30rpx;
+}
+
+.section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20rpx;
+    padding-left: 16rpx;
+    border-left: 8rpx solid var(--brand-color);
+}
+
+.target-box {
+    background: var(--brand-light);
+    padding: 24rpx;
+    border-radius: 12rpx;
+    color: var(--brand-color);
+    font-weight: bold;
+    font-size: 30rpx;
+}
+
+.advice-item {
+    display: flex;
+    margin-bottom: 16rpx;
+    font-size: 30rpx;
+    color: #555;
+    line-height: 1.6;
+}
+
+.dot {
+    margin-right: 16rpx;
+    color: var(--brand-color);
+    font-weight: bold;
+}
+
+.actions {
+    margin-top: 50rpx;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--brand-color);
+    color: white;
+    border-radius: 50rpx;
+    margin-bottom: 30rpx;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #666;
+    border-radius: 50rpx;
+}
+.disclaimer {
+    text-align: center;
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 20rpx;
+}
+
+/* Simulator Styles */
+.simulator-intro {
+    font-size: 30rpx; /* Large font */
+    color: #666;
+    margin-bottom: 20rpx;
+}
+
+.sim-item {
+    background: #f9f9f9;
+    padding: 24rpx;
+    border-radius: 12rpx;
+    margin-bottom: 20rpx;
+    border-left: 8rpx solid var(--brand-color);
+}
+
+.sim-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 32rpx;
+    margin-bottom: 10rpx;
+}
+
+.sim-change {
+    color: var(--brand-color);
+}
+
+.sim-desc {
+    font-size: 28rpx;
+    color: #666;
+}
